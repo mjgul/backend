@@ -1,6 +1,19 @@
+import { useState } from 'react';
 import { Mail, Github, Linkedin } from 'lucide-react';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        email: '',
+        message: ''
+    });
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        const subject = encodeURIComponent('Portfolio Contact');
+        const body = encodeURIComponent(`From: ${formData.email}\n\n${formData.message}`);
+        window.location.href = `mailto:contact@junaidgul.co.uk?subject=${subject}&body=${body}`;
+    };
+
     return (
         <footer className="bg-card border-t border-gray-800 py-8 md:py-12" id="contact">
             <div className="max-w-6xl mx-auto px-4 md:px-8">
@@ -23,12 +36,15 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <form className="space-y-4">
+                    <form className="space-y-4" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-1">Email</label>
                             <input
                                 type="email"
                                 id="email"
+                                required
+                                value={formData.email}
+                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                 className="w-full bg-background border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
                                 placeholder="contact@junaidgul.co.uk"
                             />
@@ -38,11 +54,14 @@ const Contact = () => {
                             <textarea
                                 id="message"
                                 rows={4}
+                                required
+                                value={formData.message}
+                                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                 className="w-full bg-background border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
                                 placeholder="Tell me about your project..."
                             />
                         </div>
-                        <button className="w-full bg-primary hover:bg-blue-600 text-white font-medium py-3 rounded-lg transition-colors">
+                        <button type="submit" className="w-full bg-primary hover:bg-blue-600 text-white font-medium py-3 rounded-lg transition-colors">
                             Send Message
                         </button>
                     </form>
