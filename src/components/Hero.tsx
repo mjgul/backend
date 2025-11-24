@@ -3,8 +3,8 @@ import { Terminal } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="min-h-screen flex items-center justify-center bg-background text-foreground p-8 pt-24">
-            <div className="max-w-4xl w-full grid md:grid-cols-2 gap-12 items-center">
+        <section className="min-h-screen flex items-center justify-center bg-background text-foreground p-4 md:p-8 pt-24">
+            <div className="max-w-4xl w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -12,13 +12,13 @@ const Hero = () => {
                 >
                     <div className="flex items-center gap-2 mb-4 text-primary">
                         <Terminal className="w-6 h-6" />
-                        <span className="font-mono text-sm">backend_developer.exe</span>
+                        <span className="font-mono text-sm">full_stack_engineer.exe</span>
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                        Building the <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Invisible</span> Power.
+                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                        Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Junaid Gul</span>.
                     </h1>
                     <p className="text-gray-400 text-lg mb-8 max-w-md">
-                        I architect scalable, robust, and high-performance backend systems using Node.js, Go, and Python.
+                        Full Stack Software Engineer with 5+ years of expertise delivering end-to-end web solutions using modern JavaScript/TypeScript and Python ecosystems.
                     </p>
                     <div className="flex gap-4">
                         <button className="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors">
@@ -45,28 +45,38 @@ const Hero = () => {
                         </div>
                         <div className="font-mono text-sm space-y-2 text-gray-300">
                             <div className="flex">
-                                <span className="text-pink-500 mr-2">func</span>
-                                <span className="text-blue-400">main</span>
-                                <span className="text-gray-500">()</span>
-                                <span className="text-gray-500 ml-2">{`{`}</span>
+                                <span className="text-pink-500 mr-2">const</span>
+                                <span className="text-blue-400">stack</span>
+                                <span className="text-gray-500">=</span>
+                                <span className="text-gray-500 ml-2">{`[`}</span>
                             </div>
                             <div className="pl-4">
-                                <span className="text-purple-400">go</span>
-                                <span className="text-yellow-300 ml-2">Serve</span>
-                                <span className="text-gray-500">(</span>
-                                <span className="text-green-400">":8080"</span>
-                                <span className="text-gray-500">)</span>
+                                <span className="text-green-400">"React"</span>,
+                                <span className="text-green-400 ml-2">"Node.js"</span>,
+                                <span className="text-green-400 ml-2">"Python"</span>,
                             </div>
-                            <div className="pl-4 text-gray-500">// Initializing microservices...</div>
+                            <div className="pl-4">
+                                <span className="text-green-400">"Go"</span>,
+                                <span className="text-green-400 ml-2">"AWS"</span>,
+                                <span className="text-green-400 ml-2">"Docker"</span>
+                            </div>
+                            <div className="text-gray-500">{`]; `}</div>
+                            <div className="flex mt-4">
+                                <span className="text-purple-400">function</span>
+                                <span className="text-yellow-300 ml-2">deploy</span>
+                                <span className="text-gray-500">()</span>
+                                <span className="text-gray-500 ml-2">{`{
+    `}</span>
+                            </div>
                             <div className="pl-4 flex items-center gap-2">
                                 <span className="text-green-500">✓</span>
-                                <span>Database connected</span>
+                                <span>CI/CD Pipeline Active</span>
                             </div>
                             <div className="pl-4 flex items-center gap-2">
                                 <span className="text-green-500">✓</span>
-                                <span>Cache layer ready</span>
+                                <span>Microservices Ready</span>
                             </div>
-                            <div className="text-gray-500">{`}`}</div>
+                            <div className="text-gray-500">{`} `}</div>
                         </div>
                     </div>
                 </motion.div>

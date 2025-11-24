@@ -3,25 +3,25 @@ import { Github, ExternalLink, Server, Database, Lock } from 'lucide-react';
 
 const projects = [
     {
-        title: "Distributed Task Queue System",
-        description: "A high-performance distributed task queue built with Go and Redis. Handles 1M+ jobs/hour with guaranteed delivery and fault tolerance.",
-        tags: ["Go", "Redis", "gRPC", "Docker"],
+        title: "Multi-Cloud Infrastructure Automation",
+        description: "Engineered scalable infrastructure across AWS, Azure, and GCP using Terraform. Implemented Kubernetes for orchestration and GitHub Actions for CI/CD, achieving zero downtime deployments.",
+        tags: ["Terraform", "AWS", "GCP", "Kubernetes", "Docker"],
         github: "#",
         demo: "#",
         icon: <Server className="w-8 h-8 text-blue-400" />,
     },
     {
-        title: "E-commerce Microservices API",
-        description: "Scalable microservices architecture for an e-commerce platform. Features include auth, inventory management, and payment processing.",
-        tags: ["Node.js", "Express", "RabbitMQ", "PostgreSQL"],
+        title: "Microservices Event-Driven Architecture",
+        description: "Developed TypeScript/Node.js microservices on GCP using Pub/Sub for asynchronous processing. Implemented secure authentication with JWT and OAuth2.",
+        tags: ["Node.js", "TypeScript", "GCP Pub/Sub", "Express"],
         github: "#",
         demo: "#",
         icon: <Database className="w-8 h-8 text-green-400" />,
     },
     {
-        title: "Real-time Analytics Engine",
-        description: "Python-based analytics engine processing real-time data streams. Uses Apache Kafka for ingestion and ClickHouse for storage.",
-        tags: ["Python", "FastAPI", "Kafka", "ClickHouse"],
+        title: "High-Performance SPA with Caching",
+        description: "Built complex SPAs with Angular & React using RxJS. Integrated Redis caching to reduce database load and improve response times to sub-200ms.",
+        tags: ["Angular", "RxJS", "Redis", "MongoDB", "Go"],
         github: "#",
         demo: "#",
         icon: <Lock className="w-8 h-8 text-purple-400" />,
@@ -30,8 +30,8 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section className="py-20 bg-background text-foreground" id="projects">
-            <div className="max-w-6xl mx-auto px-8">
+        <section className="py-12 md:py-20 bg-background text-foreground" id="projects">
+            <div className="max-w-6xl mx-auto px-4 md:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

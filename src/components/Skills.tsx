@@ -3,52 +3,32 @@ import { Database, Layers, Box } from 'lucide-react';
 
 const skills = [
     {
-        category: "Languages",
-        items: ["Node.js", "Go (Golang)", "Python", "TypeScript", "SQL"],
-        icon: <CodeIcon className="w-6 h-6 text-blue-400" />,
+        category: "Backend",
+        items: ["Node.js", "Python (Flask/Django)", "Go", "RESTful APIs", "GraphQL"],
+        icon: <Database className="w-6 h-6 text-blue-400" />,
     },
     {
-        category: "Frameworks",
-        items: ["Express", "Gin", "Fiber", "Flask", "Django", "FastAPI"],
+        category: "Frontend",
+        items: ["React", "Angular", "Next.js", "TypeScript", "React Native"],
         icon: <Layers className="w-6 h-6 text-purple-400" />,
     },
     {
-        category: "Infrastructure",
-        items: ["Docker", "Kubernetes", "AWS", "GCP", "Terraform"],
+        category: "DevOps & Cloud",
+        items: ["AWS", "Azure", "GCP", "Docker", "Kubernetes", "Terraform", "Jenkins"],
         icon: <Box className="w-6 h-6 text-green-400" />,
     },
     {
         category: "Databases",
-        items: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
+        items: ["PostgreSQL", "MongoDB", "Redis", "MySQL", "DynamoDB", "Prisma"],
         icon: <Database className="w-6 h-6 text-yellow-400" />,
     },
 ];
 
-// Custom Code Icon since Lucide's might conflict or I want a specific one
-function CodeIcon({ className }: { className?: string }) {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className={className}
-        >
-            <polyline points="16 18 22 12 16 6" />
-            <polyline points="8 6 2 12 8 18" />
-        </svg>
-    );
-}
 
 const Skills = () => {
     return (
-        <section className="py-20 bg-background text-foreground" id="skills">
-            <div className="max-w-6xl mx-auto px-8">
+        <section className="py-12 md:py-20 bg-background text-foreground" id="skills">
+            <div className="max-w-6xl mx-auto px-4 md:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

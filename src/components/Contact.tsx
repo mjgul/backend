@@ -1,9 +1,9 @@
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 
 const Contact = () => {
     return (
-        <footer className="bg-card border-t border-gray-800 py-12" id="contact">
-            <div className="max-w-6xl mx-auto px-8">
+        <footer className="bg-card border-t border-gray-800 py-8 md:py-12" id="contact">
+            <div className="max-w-6xl mx-auto px-4 md:px-8">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <h2 className="text-3xl font-bold mb-4">Let's Build Something Amazing</h2>
@@ -11,16 +11,13 @@ const Contact = () => {
                             I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
                         </p>
                         <div className="flex gap-6">
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
+                            <a href="https://github.com/mjgul" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
                                 <Github className="w-6 h-6" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
+                            <a href="https://linkedin.com/in/junaidgulsatti" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
                                 <Linkedin className="w-6 h-6" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
-                                <Twitter className="w-6 h-6" />
-                            </a>
-                            <a href="mailto:hello@example.com" className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
+                            <a href="mailto:contact@junaidgul.co.uk" className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
                                 <Mail className="w-6 h-6" />
                             </a>
                         </div>
@@ -33,7 +30,7 @@ const Contact = () => {
                                 type="email"
                                 id="email"
                                 className="w-full bg-background border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
-                                placeholder="john@example.com"
+                                placeholder="contact@junaidgul.co.uk"
                             />
                         </div>
                         <div>
