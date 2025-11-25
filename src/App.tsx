@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import ServerWorkflow from './components/ServerWorkflow';
 import Contact from './components/Contact';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
         <Hero />
         <Skills />
         <Projects />
+        <ServerWorkflow />
         <Contact />
       </main>
     </div>
